@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login form</title>
+</head>
+<body align="center" bgcolor="lightblue">
+   <form action="sellerlogin" method="post">
+      {% csrf_token %}
+      <h2>Seller Login</h2>
+      <input type="text" name="username" placeholder="User name"><br><br>
+      <input type="password" name="password" placeholder="Password"><br><br>
+      <input type="submit">
+      {% if value %}
+          <h3>Invalid login</h3>
+      {%endif%}
+   </form>
+</body>
+</html>

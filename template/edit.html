@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body align="center">
+      <h1>Edit your Account</h1>
+      <form action="addedit/{{user.id}}" method="post">
+         {% csrf_token %}
+      <input type="text" name="fname" placeholder="{{user.fname}}" value="{{user.fname}}"><br><br>
+      <input type="text" name="lname" placeholder="{{user.lname}}" value="{{user.lname}}"><br><br>
+      <input type="text" name="address" placeholder="{{user.address}}" value="{{user.address}}"><br><br>
+      <input type="number" max="999999" name="pincode" placeholder="{{user.pincode}}" value="{{user.pincode}}"><br><br>
+      <input type="text" name="mobile" placeholder="{{user.mobile}}" value="{{user.mobile}}"><br><br>
+      <input type="text" name="username" placeholder="{{user.username}}" value="{{user.username}}"><br><br>
+      <input type="submit">
+   </form>
+      <!--<button><a href="addedit/{{user.id}}" method="POST">Edit</a></button>-->
+</body>
+</html>

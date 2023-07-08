@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bill</title>
+</head>
+<body align="center">
+   <h3>customer details</h3>
+   <center><table border="3px">
+      <tr>
+         <td>id : </td>
+         <td>{{customer.id}}</td>
+      </tr>
+      <tr>
+         <td>first name : </td>
+         <td>{{customer.fname}}</td>
+      </tr>
+      <tr>
+         <td>last namem : </td>
+         <td>{{customer.lname}}</td>
+      </tr>
+      <tr>
+         <td>address</td>
+         <td>{{customer.address}}</td>
+      </tr>
+      <tr>
+         <td>pincode : </td>
+         <td>{{customer.pincode}}</td>
+      </tr>
+   </table>
+   <h3>product details</h3>
+   <form method="post">
+   <table border="3px">
+      <tr>
+         <td>id :</td>
+         <td>{{product.id}}</td>
+      </tr>
+      <tr>
+         <td>name : </td>
+         <td>{{product.name}}</td>
+      </tr>
+      <tr>
+         <td>cost : </td>
+         <td>{{product.cost}}</td>
+      </tr>
+      <tr>
+         <td>quantity : </td>
+         <td>1</td>
+      </tr>
+   </table></center>
+   <!--<a href="buy/{{product.id}}/{{customer.id}}" value="submit">buy</a></form>-->
+<h1>{{msg}}</h1>
+</body>
+</html>

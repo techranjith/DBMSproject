@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Account details</title>
+   <link rel="stylesheet" href="styles/account.css">
+</head>
+<body align="center">
+   <h3>Acount details</h3>
+   <br><button><a href="edit/{{user.id}}" style="font:20px">edit</a></button><br><br>
+   <table align="center" width="100%" border="3"style="color:black;" bordercolor="green" style="border-style:double">
+      <tr>
+         <td>id</td>
+         <td><b>fname</b></td>
+         <td><b>lname</b></td>
+         <td><b>username</b></td>
+         <td><b>email</b></td>
+         <td><b>Address</b></td>
+         <td><b>Mobile</b></td>	
+      </tr>
+      <tr>
+         <td>{{user.id}}</td>
+         <td>{{user.fname}}</td>
+         <td>{{user.lname}}</td>
+         <td>{{user.username}}</td>
+         <td>{{user.email}}</td>
+         <td>{{user.address}}</td>	
+         <td>{{user.mobile}}</td>
+      </tr>
+   </table>
+   <h3>product purchased</h3>
+   <table align="center" width="50%" border="3"style="color:black;" bordercolor="green" style="border-style:double">
+      <tr>
+         <td><b><span>Product id</span></b></td>
+         <td><b>cost</b></td>
+         <td><b>quantity</b></td>
+      </tr>
+      {% for p in product %}
+      <tr>
+         <td>{{p.pid}}</td>
+         <td>{{p.cost}}</td>
+         <td>{{p.quantitywished}}</td>
+         </tr>
+      {% endfor %}
+</body>
+</html>

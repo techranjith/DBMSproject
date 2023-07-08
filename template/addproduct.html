@@ -1,0 +1,51 @@
+<html>  
+    <head>   
+    <title>  
+    Registration Page  
+    </title>  
+    </head>  
+    <body bgcolor="lightblue" align="center">  
+    <br>  
+    <br>  
+    <form action="add" method="post">  
+   {% csrf_token %}
+    <label>Name : </label>         
+    <input type="text" name="name" size="20"/> <br> <br>  
+    <label>Type : </label>     
+    <input type="text" name="type" size="20"/> <br> <br>  
+      
+
+    Description :  
+    <br>  
+    <textarea cols="60" rows="5" value="description" name="description">  
+    </textarea>  
+    <br> <br>      
+    
+    <label> 
+    Quantity :  
+    </label>   
+    <select name="quantity">
+    <option placeholder="Select">Select</option> 
+    <option value="1">1</option>  
+    <option value="2">2</option>  
+    <option value="3">3</option>  
+    <option value="4">4</option>  
+    <option value="5">5</option>  
+    <option value="6">6</option>  
+    <option value="7">7</option>
+    <option value="8">8</option> 
+    <option value="9">9</option> 
+    <option value="10">10</option> 
+    </select> 
+    <br> <br>  
+    <label>Cost : </label>     
+    <input type="number" name="cost" size="20"/><br><br>
+    <select name="sellerid">
+      {% for i in user %}
+      <option value="{{i.id}}">{{i.name}}</option>
+      {% endfor %}
+    </select> 
+    <input type="submit" value="submit">
+    </form>  
+    </body>  
+    </html>  

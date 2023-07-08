@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Seller</title>
+</head>
+<body bgcolor="lightblue">
+   <center><h3><p style="color: blue;">{{user.name}}</p>Your products on Market<br><a href="selleraccount/{{user.id}}" align="right">profile</a></h3></center>
+   <p align="right">
+      <a href="sellerlogout">logout</a>
+      <br><br>
+      <a href="addproduct">add product</a>
+      <br><br>
+   </p>
+   <table align="center" width="100%" border="3"style="color:black;" bordercolor="green" style="border-style:double">
+      <tr>
+         <td><b><span>Product Name</span></b></td>
+         <td><b>Type</b></td>
+         <td><b>cost</b></td>
+         <td><b>Details</b></td>
+         <td><b>DELETE</b></td>	
+      </tr>
+      {% for p in product %}
+      <tr>
+         <td>{{p.name}}</td>
+         <td>{{p.type}}</td>
+         <td>{{p.cost}}</td>
+         <td><a href="products/{{p.id}}">Details</a></td>
+         <td><a href="delete/{{p.id}}/{{user.id}}">delete</a></td>	
+      </tr>
+      {% endfor %}
+   </table>
+   {% if msg %}
+      <h2>{{msg}}</h2>
+   {% endif %}
+</body>
+</html>
